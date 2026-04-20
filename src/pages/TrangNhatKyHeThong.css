@@ -1,0 +1,506 @@
+.nhat-ky-container {
+  padding: 20px 48px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeIn 0.5s ease-out;
+  background: transparent;
+  margin-top: 70px;
+}
+
+/* Page Header */
+.page-header-nhatky {
+  margin-bottom: -8px;
+}
+
+.page-header-nhatky .main-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.5px;
+  margin: 0 0 8px 0;
+}
+
+.page-header-nhatky .sub-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Bento Grid */
+.nk-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+.span-8 {
+  grid-column: span 8;
+}
+
+.span-4 {
+  grid-column: span 4;
+}
+
+.nk-main-column,
+.nk-side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.nk-bento-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 10px 40px rgba(26, 28, 29, 0.02);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Filter Card */
+.nk-filter-card {
+  padding: 16px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nk-search-box-large {
+  position: relative;
+  flex: 1;
+}
+
+.nk-search-box-large .nk-icon-left {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.nk-search-box-large input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.nk-search-box-large input:focus {
+  outline: none;
+  border-color: #DA251D;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(218, 37, 29, 0.1);
+}
+
+.nk-filter-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.nk-btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nk-btn-outline:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+/* Log Table Card */
+.nk-log-table-card {
+  padding: 32px;
+  flex: 1;
+}
+
+.nk-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.nk-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.nk-log-matrix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.nk-log-matrix th {
+  text-align: left;
+  padding: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.nk-log-matrix th:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding-left: 20px;
+}
+
+.nk-log-matrix th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.nk-log-matrix td {
+  padding: 18px 16px;
+  font-size: 13px;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+  border-top: 1px solid transparent;
+  vertical-align: middle;
+}
+
+.nk-log-matrix td:first-child {
+  padding-left: 20px;
+}
+
+.nk-log-matrix tr:hover td {
+  background: #fafafa;
+}
+
+.nk-log-time {
+  color: #6b7280;
+  font-family: inherit;
+}
+
+.nk-log-user {
+  font-weight: 600;
+  color: #111827;
+}
+
+.nk-log-ip {
+  color: #9ca3af;
+}
+
+.nk-log-target {
+  font-weight: 500;
+}
+
+/* Actions Tags */
+.action-tag {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.action-info {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.action-warning {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.action-danger {
+  background: #ffe4e6;
+  color: #be123c;
+}
+
+.action-success {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.action-default {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: #ecfdf5;
+  color: #10b981;
+}
+
+.badge-error {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+/* ---------------- SIDE COLUMN ---------------- */
+
+/* API Status Card (LGSP) */
+.nk-stat-card {
+  padding: 24px;
+}
+
+.nk-stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.nk-stat-card-header h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.nk-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #ecfdf5;
+  color: #059669;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nk-status-dot-mini {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.nk-stat-sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nk-stat-sub-row {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f3f4f6;
+  transition: all 0.2s;
+}
+
+.nk-stat-sub-row:hover {
+  border-color: #e5e7eb;
+  background: #f3f4f6;
+}
+
+.nk-stat-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nk-stat-label-light {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.nk-stat-val-bold {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.nk-mini-chart-wrapper {
+  width: 80px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.nk-check-circle-icon {
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Endpoint Card */
+.nk-endpoint-card {
+  padding: 32px;
+}
+
+.nk-card-title-sm {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 24px 0;
+}
+
+.nk-card-title-sm svg {
+  color: #DA251D;
+}
+
+.nk-endpoint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nk-ep-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.nk-ep-item:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.nk-ep-item.nk-warning {
+  border-color: #fef08a;
+  background: #fefce8;
+}
+
+.nk-ep-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nk-ep-info strong {
+  font-size: 13px;
+  color: #111827;
+}
+
+.nk-ep-info span {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.nk-ep-status {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.nk-ep-status.active {
+  color: #059669;
+  background: #d1fae5;
+}
+
+.nk-ep-status.failed {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+/* Config Card */
+.nk-config-card {
+  padding: 24px;
+  background: #f3f3f5;
+  border: 1px solid rgba(230, 189, 183, 0.4);
+}
+
+.nk-card-desc {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.nk-config-setting {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.nk-setting-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.nk-setting-row span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.nk-setting-row strong {
+  font-size: 14px;
+  color: #111827;
+  padding-left: 22px;
+}
+
+.nk-btn-save-config {
+  width: 100%;
+  padding: 12px;
+  background: #111827;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nk-btn-save-config:hover {
+  background: #374151;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

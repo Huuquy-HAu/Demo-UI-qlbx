@@ -1,0 +1,96 @@
+/* ===== HEADER - TopAppBar (1:126) ===== */
+/* 1280x80, fixed, padding 0 48px, space-between, center */
+/* bg: white 80% opacity, blur 24px, shadow 0 10 40 rgba(26,28,29,0.06) */
+
+.home-header {
+  height: 80px;
+  padding: 0 48px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0px 10px 40px rgba(26, 28, 29, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* Logo placeholder */
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo .logo-text {
+  font-size: 20px;
+  font-weight: 900;
+  color: #0F172A;
+  margin-left: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #B40006, #DA251D);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+/* Nav (1:132) - horizontal, gap 32px, vertically centered */
+.header-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Nav links - Inter Medium 12px, uppercase, letter-spacing 0.6px */
+/* color: rgba(71,85,105,1) => #475569 (from fill r:0.278 g:0.333 b:0.412) */
+.nav-link {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  color: #475569;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #B40006;
+  background-color: rgba(180, 0, 6, 0.06);
+}
+
+/* Button (1:145) - 108x40, pill, gradient */
+/* gradient: #B40006 -> #DA251D */
+.header-btn {
+  width: 108px;
+  height: 40px;
+  border: none;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #B40006 0%, #DA251D 100%);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.header-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}

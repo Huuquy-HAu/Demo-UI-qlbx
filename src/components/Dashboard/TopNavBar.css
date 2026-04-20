@@ -1,0 +1,141 @@
+.top-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 10px 40px rgba(26, 28, 29, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  z-index: 100;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.top-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  color: #6B7280;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.breadcrumb-item:last-child {
+  color: #1A1C1D;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.breadcrumb-separator {
+  color: #9CA3AF;
+  margin-top: 2px;
+}
+
+.top-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tnb-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 320px;
+}
+
+.tnb-search-input {
+  width: 100%;
+  height: 40px;
+  background-color: #F1F5F9;
+  border: none;
+  border-radius: 999px;
+  padding: 0 16px 0 44px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1A1C1D;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tnb-search-input:focus {
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(218, 37, 29, 0.1);
+  width: 380px;
+}
+
+.tnb-search-icon {
+  position: absolute;
+  left: 16px;
+  width: 18px !important;
+  height: 18px !important;
+  color: #94A3B8;
+  pointer-events: none;
+  transition: color 0.2s;
+  z-index: 5;
+}
+
+.tnb-search-input:focus ~ .tnb-search-icon,
+.tnb-search-wrapper:focus-within .tnb-search-icon {
+  color: #DA251D;
+}
+
+.notification-btn {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #B40006;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.user-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1A1C1D;
+  line-height: 20px;
+}
+
+.user-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #6B7280;
+  line-height: 16px;
+}
+
+.avatar-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.avatar-wrapper:hover {
+  transform: scale(1.05);
+}

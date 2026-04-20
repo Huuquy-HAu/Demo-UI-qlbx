@@ -1,0 +1,47 @@
+/* ===== GLOBAL RESET & BASE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1A1C1D;
+  background-color: #FFFFFF;
+  line-height: 1.5;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+/* Main layout */
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout .content {
+  flex: 1;
+  margin-top: 80px; /* header height offset */
+}
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; }
+input { font-family: inherit; }

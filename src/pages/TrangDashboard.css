@@ -1,0 +1,557 @@
+.dashboard-page {
+  padding-top: 112px;
+  padding-bottom: 32px;
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+.dashboard-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #1A1C1D;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.dashboard-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* Base Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.row-span-2 {
+  grid-row: span 2;
+}
+
+/* Stat Cards */
+.stat-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F3F4F6;
+}
+
+.text-blue {
+  color: #2563EB;
+  background-color: #EFF6FF;
+}
+
+.text-red {
+  color: #B40006;
+  background-color: #FEF2F2;
+}
+
+.text-yellow {
+  color: #D97706;
+  background-color: #FFFBEB;
+}
+
+.stat-value {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  color: #1A1C1D;
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1A1C1D;
+  margin: 0;
+}
+
+.card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+  line-height: 22px;
+  margin-top: 8px;
+}
+
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.view-all {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563EB;
+  text-decoration: none;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+/* Risk Analysis Card */
+.risk-analysis-container {
+  display: flex;
+  flex: 1;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.risk-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie-chart-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#da251d 0% 42%, #FEE2E2 42% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie-inner {
+  width: 110px;
+  height: 110px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pie-score {
+  font-size: 32px;
+  font-weight: 800;
+  color: #da251d;
+  line-height: 1;
+}
+
+.pie-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6B7280;
+  margin-top: 4px;
+}
+
+.risk-summary-text {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #4B5563;
+  line-height: 1.5;
+}
+
+.risk-divider {
+  width: 1px;
+  background-color: #E5E7EB;
+  margin: 0 8px;
+}
+
+.risk-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.high-risk-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.high-risk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.high-risk-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.high-risk-item.critical {
+  background: #F9F9FB;
+}
+
+.high-risk-item.warning {
+  background: #F9F9FB;
+}
+
+.risk-item-score {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.high-risk-item.critical .risk-item-score {
+  color: #da251d;
+  width: 32px;
+  height: 32px;
+  background: #FFDAD6;
+  border-radius: 50%;
+}
+
+.high-risk-item.warning .risk-item-score {
+  color: #1A1C1D;
+  width: 32px;
+  height: 32px;
+  background: #E2E2E4;
+  border-radius: 50%;
+}
+
+.risk-item-info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 12px;
+}
+
+/* 
+.high-risk-item.critical .risk-item-info {
+  border-left: 1px solid rgba(218, 37, 29, 0.2);
+}
+
+.high-risk-item.warning .risk-item-info {
+  border-left: 1px solid rgba(217, 119, 6, 0.2);
+} */
+
+.company-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.company-address {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+/* Alerts List */
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alert-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  border-left: 3px solid transparent;
+}
+
+.alert-item:first-child {
+  border-left-color: #B40006;
+}
+
+.alert-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bg-red-light {
+  background: #FEF2F2;
+}
+
+.bg-yellow-light {
+  background: #FFFBEB;
+}
+
+.alert-content h4 {
+  margin: 0 0 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1A1C1D;
+  line-height: 20px;
+}
+
+.alert-content span {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+/* Map Card */
+.map-card {
+  padding: 0;
+  min-height: 280px;
+}
+
+.px-8 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.pt-8 {
+  padding-top: 24px;
+}
+
+.z-10 {
+  position: relative;
+  z-index: 10;
+}
+
+.badge {
+  background: #EFF6FF;
+  color: #2563EB;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.map-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../src/assets/img/Map-home-img.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.map-markers {
+  position: absolute;
+  inset: 0;
+}
+
+.marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #6B7280;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.marker-active {
+  color: #2563EB;
+}
+
+.marker-warning {
+  color: #B40006;
+}
+
+/* Process Tracker (Stepper) */
+.col-span-3 {
+  grid-column: span 3;
+}
+
+.process-stepper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.step-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+  color: #9CA3AF;
+  transition: all 0.3s ease;
+}
+
+/* Trục ngang nằm ngay sau icon và đâm từ tâm block này sang tâm block kế */
+.step-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #E5E7EB;
+  z-index: 1;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+/* Ẩn line của step cuối */
+.step:last-child .step-line {
+  display: none;
+}
+
+/* Completed Step Design */
+.step.completed .step-icon {
+  border-color: #DA251D;
+  background: #DA251D;
+  color: white;
+}
+
+.step.completed .step-line {
+  background-color: #DA251D;
+}
+
+/* Active Step Design */
+.step.active .step-icon {
+  border-color: #DA251D;
+  color: #DA251D;
+  background: #FEF2F2;
+  box-shadow: 0 0 0 6px rgba(218, 37, 29, 0.1);
+}
+
+.step.active .step-line {
+  background-color: #E5E7EB;
+}
+
+/* Pulse animation for active step dot */
+.pulse-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #DA251D;
+  border-radius: 50%;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(218, 37, 29, 0.5); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(218, 37, 29, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(218, 37, 29, 0); }
+}
+
+.step-info {
+  text-align: center;
+}
+
+.step-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 6px 0;
+}
+
+.step.completed .step-title,
+.step.active .step-title {
+  color: #DA251D;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.linear-bg {
+  background: linear-gradient(to bottom right,
+      #B40006 0%,
+      #DA251D 100%) !important;
+}

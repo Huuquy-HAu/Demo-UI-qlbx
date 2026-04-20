@@ -1,0 +1,107 @@
+/* ===== FOOTER (1:106) ===== */
+/* 1280x416, bg #B40006 */
+.home-footer {
+  background-color: #B40006;
+  color: white;
+  padding: 52px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main content (1:107) - centered, vertical, gap 16 */
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.footer-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* Heading */
+.footer-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Address (1:110) - centered, max-width 552px */
+.footer-address {
+  text-align: center;
+  max-width: 552px;
+  padding: 0 10px;
+}
+
+.footer-address p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.footer-address p:first-child {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+}
+
+/* Links row (1:112) */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.footer-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-link-sep {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Divider (1:122) */
+.footer-divider {
+  width: 100%;
+  max-width: 1184px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 24px;
+}
+
+/* Copyright (1:124) */
+.footer-copyright {
+  text-align: center;
+}
+
+.footer-copyright p {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}

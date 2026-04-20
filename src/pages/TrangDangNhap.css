@@ -1,0 +1,296 @@
+/* TrangDangNhap.css */
+.login-screen-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background-color: #f9f9fb;
+  font-family: 'Inter', sans-serif;
+}
+
+.decorative-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bg-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.2;
+  filter: blur(4px);
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/img/Decorative Background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Optional second overlay to tint the background further if needed, the background gets white/gray fill in figma normally */
+}
+
+.main-content-area {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 147px 32px;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid rgba(230, 189, 183, 0.15);
+  box-shadow: 0px 10px 40px rgba(26, 28, 29, 0.06);
+  border-radius: 24px;
+  padding: 48px;
+  width: 100%;
+  max-width: 448px;
+  gap: 32px;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.login-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+.login-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #5d403b;
+  margin: 0;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.form-label {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1a1c1d;
+}
+
+.form-group input {
+  height: 48px;
+  border: none;
+  background-color: #F3F3F5;
+}
+
+.form-group .mantine-PasswordInput-input {
+  height: 48px;
+  border: none !important;
+  background-color: #F3F3F5 !important;
+  padding-left: 0 !important;
+}
+
+.form-group .mantine-PasswordInput-innerInput {
+  background-color: transparent !important;
+}
+
+.required {
+  color: #da251d;
+}
+
+.login-input {
+  border-radius: 8px;
+  border: none !important;
+  padding-left: 48px !important;
+  background-color: #F3F3F5 !important;
+}
+
+.login-input:focus,
+.login-input:focus-within {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 2px #b40006 !important;
+}
+
+.login-inner-input {
+  padding-left: 48px !important; /* Push text for PasswordInput */
+}
+
+.form-group .mantine-TextInput-wrapper .login-input,
+.form-group .mantine-Select-wrapper .login-input {
+  padding-left: 48px !important;
+}
+
+.form-group .mantine-PasswordInput-wrapper .login-input {
+  padding-left: 0 !important;
+}
+
+.login-select {
+  /* specificity */
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-action-btn {
+  background: linear-gradient(280.45deg, #b40006 0%, #da251d 100%);
+  border-radius: 24px;
+  height: 56px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+
+.login-action-btn:hover {
+  opacity: 0.9;
+}
+
+.linear-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  background-color: transparent;
+}
+
+.linear-footer p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5d403b;
+  margin: 0;
+}
+
+/* Demo Accounts Styles */
+.demo-accounts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.demo-accounts-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.demo-divider {
+  flex: 1;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+.demo-divider-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.demo-account-box {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #f1f5f9;
+}
+
+.demo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.demo-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.demo-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.demo-note {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 576px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+}
