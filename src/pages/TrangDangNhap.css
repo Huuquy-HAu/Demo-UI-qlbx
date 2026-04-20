@@ -31,7 +31,7 @@
 .bg-image {
   width: 100%;
   height: 100%;
-  background-image: url('../assets/img/Decorative Background.png');
+  background-image: url('../assets/img/decorative_background.png');
   background-size: cover;
   background-position: center;
 }

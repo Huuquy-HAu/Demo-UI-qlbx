@@ -5,10 +5,14 @@ import './TrangChu.css';
 import { Button, Flex } from '@mantine/core';
 
 // Slider images
+import halong1 from '../assets/img/halong_1.png';
+import halong2 from '../assets/img/halong_2.png';
+import halong3 from '../assets/img/halong_3.png';
+
 const sliderImages = [
-  '/src/assets/img/halong_1.png',
-  '/src/assets/img/halong_2.png',
-  '/src/assets/img/halong_3.png'
+  halong1,
+  halong2,
+  halong3
 ];
 
 export default function TrangChu() {
