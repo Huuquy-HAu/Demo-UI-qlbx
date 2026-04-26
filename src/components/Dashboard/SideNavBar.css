@@ -1,5 +1,5 @@
 .side-navbar {
-  width: 256px;
+  width: 270px;
   background-color: #F8FAFC;
   border-right: 1px solid #E2E8F0;
   display: flex;
@@ -50,6 +50,7 @@
 .nav-group-label {
   font-size: 11px;
   font-weight: 600;
+  text-transform: lowercase;
   text-transform: capitalize;
   color: #9CA3AF;
   letter-spacing: 0.5px;
@@ -64,6 +65,12 @@
   flex-direction: column;
   gap: 4px;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.side-navbar-main::-webkit-scrollbar {
+  display: none;
 }
 
 .side-navbar .nav-menu {
@@ -86,6 +93,7 @@
   width: 100%;
   cursor: pointer;
   text-align: left;
+  font-family: inherit;
 }
 
 .side-navbar .nav-link:hover {
@@ -162,10 +170,15 @@
 .sub-nav-label {
   font-size: 13px;
   line-height: 18px;
+  text-transform: none !important;
 }
 
-.nav-menu a {
-  text-transform: capitalize;
+.nav-label {
+  text-transform: none !important;
+}
+
+.nav-link, .sub-nav-link {
+  text-transform: none !important;
 }
 
 /* Footer & Logout */
@@ -179,11 +192,14 @@
 }
 
 .side-navbar .logout-btn {
-  color: #DC2626 !important;
+  color: #DC2626;
+  font-weight: 500;
+  margin-top: 8px;
 }
 
 .logout-btn:hover {
   background-color: #FEF2F2 !important;
+  color: #B91C1C !important;
 }
 
 .collapse-toggle-btn {
@@ -192,21 +208,29 @@
   justify-content: center;
   padding: 10px;
   border-radius: 8px;
-  background: transparent;
+  background: white;
   border: 1px solid #E2E8F0;
   color: #64748B;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-top: 4px;
 }
 
 .collapse-toggle-btn:hover {
-  background-color: #F1F5F9;
-  color: #1A1C1D;
-  border-color: #CBD5E1;
+  background-color: #F8FAFC;
+  color: #B91C1C;
+  border-color: #FEE2E2;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
 }
 
-.is-collapsed .nav-link, 
+.collapse-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.is-collapsed .nav-link,
 .is-collapsed .collapse-toggle-btn {
   justify-content: center;
   padding: 10px 0;
@@ -222,4 +246,46 @@
 
 .is-collapsed .sub-menu {
   display: none;
+}
+
+.mobile-close-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Responsive Dashboard Sidebar */
+@media screen and (max-width: 768px) {
+  .side-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 270px !important; /* Force standard width on mobile */
+    box-shadow: 20px 0 50px rgba(0, 0, 0, 0.1);
+  }
+
+  .side-navbar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .mobile-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .collapse-toggle-btn {
+    display: none; /* Hide collapse btn on mobile as it's a drawer */
+  }
+
+  .side-navbar-header {
+    justify-content: space-between;
+  }
 }

@@ -3,11 +3,13 @@ import './TrangDashboard.css';
 import {
   IconShieldCheck,
   IconAlertTriangle,
-  IconMapPin,
   IconChecklist,
-  IconFileCertificate
+  IconFileCertificate,
+  IconClockExclamation,
+  IconSearch,
+  IconCalendarEvent
 } from '@tabler/icons-react';
-import { CircleCheckHomeIcon, DeviceManagementHomeIcon, ReportHomeIcon } from '../assets/icon';
+import { ReportHomeIcon } from '../assets/icon';
 import { Flex, Text } from '@mantine/core';
 
 const TrangDashboard: React.FC = () => {
@@ -20,9 +22,8 @@ const TrangDashboard: React.FC = () => {
           <p className="dashboard-subtitle">Theo dõi trạng thái an toàn bức xạ thời gian thực</p>
         </div>
 
-        {/* Grid Layout */}
-        <div className="dashboard-grid">
-          {/* Stats Row */}
+        {/* Statistics Row */}
+        <div className="stats-grid">
           <div className="stat-card">
             <Flex align='center' justify='space-between' gap={8} style={{ width: '100%' }}>
               <div className="stat-label">TỔNG SỐ CƠ SỞ</div>
@@ -30,27 +31,55 @@ const TrangDashboard: React.FC = () => {
             </Flex>
             <div className="stat-value" style={{ width: '100%' }}>142</div>
           </div>
+
           <div className="stat-card">
             <Flex align='center' justify='space-between' gap={8} style={{ width: '100%' }}>
-              <div className="stat-label">Thiết bị X-Quang</div>
-              <DeviceManagementHomeIcon />
+              <div className="stat-label">GP SẮP HẾT HẠN</div>
+              <div className="stat-icon-mini text-red">
+                <IconClockExclamation size={20} />
+              </div>
             </Flex>
-            <div className="stat-value" style={{ width: '100%' }}>352</div>
+            <div className="stat-value" style={{ width: '100%' }}>24</div>
           </div>
+
+          <div className="stat-card">
+            <Flex align='center' justify='space-between' gap={8} style={{ width: '100%' }}>
+              <div className="stat-label">BÁO CÁO CHẬM</div>
+              <div className="stat-icon-mini text-yellow">
+                <IconAlertTriangle size={20} />
+              </div>
+            </Flex>
+            <div className="stat-value" style={{ width: '100%' }}>12</div>
+          </div>
+
+          <div className="stat-card">
+            <Flex align='center' justify='space-between' gap={8} style={{ width: '100%' }}>
+              <div className="stat-label">THANH TRA/KIỂM TRA</div>
+              <div className="stat-icon-mini text-blue">
+                <IconSearch size={20} />
+              </div>
+            </Flex>
+            <div className="stat-value" style={{ width: '100%' }}>08</div>
+          </div>
+
           <div className="stat-card linear-bg">
             <Flex align='center' justify='space-between' gap={8} style={{ width: '100%' }}>
-              <div className="stat-label" style={{ color: 'white' }}>Tỉ lệ nộp báo cáo</div>
-              <CircleCheckHomeIcon />
+              <div className="stat-label" style={{ color: 'white' }}>SỰ CỐ PHÁT SINH</div>
+              <IconAlertTriangle size={24} color="white" />
             </Flex>
             <Flex align='end' justify='start' gap={8} style={{ width: '100%' }}>
-              <Text fw={700} size='48px' style={{ color: 'white' }}>
-                95%
+              <Text fw={700} size='40px' style={{ color: 'white' }}>
+                02
               </Text>
               <Text size='14px' fw={400} style={{ color: 'white' }}>
-                Đúng hạn
+                Cần xử lý
               </Text>
             </Flex>
           </div>
+        </div>
+
+        {/* Main Grid Content */}
+        <div className="dashboard-grid">
 
           {/* Featured Card (Risk Scoring) & Alerts */}
           <div className="dashboard-card row-span-2 col-span-2 flex flex-col">
@@ -140,22 +169,9 @@ const TrangDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Interactive Map Placeholder & Workflow Status */}
-          <div className="dashboard-card map-card col-span-1">
-            <div className="card-header-flex z-10 px-8 pt-8">
-              <h3 className="card-title">Bản đồ Phân bổ</h3>
-            </div>
-            <div className="map-bg"></div>
-            <div className="map-overlay"></div>
+          {/* Workflow Status */}
 
-            <div className="map-markers z-10">
-              <div className="marker marker-active"><IconMapPin size={24} /></div>
-              <div className="marker marker-warning" style={{ left: '60%', top: '40%' }}><IconMapPin size={24} /></div>
-              <div className="marker" style={{ left: '30%', top: '70%' }}><IconMapPin size={24} /></div>
-            </div>
-          </div>
-
-          <div className="dashboard-card process-tracker-card col-span-3">
+          <div className="dashboard-card process-tracker-card col-span-2">
             <h3 className="card-title mb-6">Quy trình duyệt báo cáo định kỳ</h3>
             
             <div className="process-stepper">
@@ -213,6 +229,35 @@ const TrangDashboard: React.FC = () => {
                   <p className="step-desc">Lãnh đạo</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="dashboard-card training-card col-span-1">
+            <div className="card-header-flex">
+              <h3 className="card-title">Đào tạo & Tập huấn</h3>
+              <a href="#" className="view-all">Lịch học</a>
+            </div>
+            <div className="training-list">
+              <div className="training-item">
+                <div className="training-icon"><IconCalendarEvent size={20} color="#2563EB" /></div>
+                <div className="training-info">
+                  <p className="training-name">An toàn bức xạ Y tế</p>
+                  <p className="training-date">28/04/2024 • 45 học viên</p>
+                </div>
+              </div>
+              <div className="training-item">
+                <div className="training-icon"><IconCalendarEvent size={20} color="#2563EB" /></div>
+                <div className="training-info">
+                  <p className="training-name">Ứng phó sự cố cấp tỉnh</p>
+                  <p className="training-date">15/05/2024 • 30 học viên</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-auto pt-4">
+              <Flex justify="space-between" align="center">
+                <Text size="13px" c="#6B7280">Chứng chỉ cấp mới</Text>
+                <Text size="14px" fw={700}>+12</Text>
+              </Flex>
             </div>
           </div>
         </div>

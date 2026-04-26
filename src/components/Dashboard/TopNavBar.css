@@ -90,18 +90,54 @@
 }
 
 .notification-btn {
+  transition: all 0.2s ease;
   position: relative;
 }
 
-.notification-badge {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 8px;
-  height: 8px;
-  background-color: #B40006;
-  border-radius: 50%;
-  border: 2px solid white;
+.notification-btn:hover {
+  background-color: #F8FAFC;
+  transform: translateY(-1px);
+}
+
+/* Notification Popover Content */
+.tnb-noti-header {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.tnb-noti-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #F8FAFC;
+  border-left: 3px solid transparent;
+}
+
+.tnb-noti-item:hover {
+  background-color: #F8FAFC;
+  border-left-color: #ea1e22;
+}
+
+.tnb-noti-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tnb-noti-footer {
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid #F1F5F9;
 }
 
 .user-profile-section {
@@ -138,4 +174,75 @@
 
 .avatar-wrapper:hover {
   transform: scale(1.05);
+}
+
+/* Dashboard Menu Toggle */
+.dashboard-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 8px;
+}
+
+.top-navbar-left-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive TopNavBar */
+@media screen and (max-width: 1024px) {
+  .top-navbar {
+    padding: 0 20px;
+  }
+
+  .tnb-main-title {
+    font-size: 16px !important;
+  }
+
+  .tnb-search-wrapper {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tnb-subtitle {
+    display: none;
+  }
+
+  .tnb-search-wrapper {
+    width: 40px;
+    background: transparent;
+  }
+
+  .tnb-search-input {
+    display: none;
+  }
+
+  .tnb-search-icon {
+    left: 11px;
+    color: #64748B;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .top-navbar {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tnb-main-title {
+    display: none;
+  }
 }

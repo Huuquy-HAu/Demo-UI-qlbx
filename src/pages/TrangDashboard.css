@@ -32,6 +32,14 @@
   margin: 0;
 }
 
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
 /* Base Grid */
 .dashboard-grid {
   display: grid;
@@ -104,6 +112,15 @@
   color: #6B7280;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.stat-icon-mini {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Dashboard Cards */
@@ -554,4 +571,160 @@
   background: linear-gradient(to bottom right,
       #B40006 0%,
       #DA251D 100%) !important;
+}
+
+/* Training Section */
+.training-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.training-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #F8FAFC;
+  border-radius: 12px;
+}
+
+.training-icon {
+  width: 32px;
+  height: 32px;
+  background: #EFF6FF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.training-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1C1D;
+  margin: 0;
+}
+
+.training-date {
+  font-size: 12px;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* Response for grids */
+@media screen and (max-width: 1400px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dashboard-container {
+    padding: 0 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .col-span-2, .col-span-1 {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-page {
+    padding-top: 90px;
+  }
+
+  .dashboard-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .dashboard-subtitle {
+    font-size: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .risk-analysis-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .risk-divider {
+    width: 100%;
+    height: 1px;
+    margin: 16px 0;
+  }
+
+  .risk-left, .risk-right {
+    width: 100%;
+  }
+
+  /* Process Tracker Vertical on Mobile */
+  .process-stepper {
+    flex-direction: column;
+    gap: 32px;
+    padding-left: 12px;
+  }
+
+  .step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+  }
+
+  .step-indicator {
+    width: auto;
+    margin-bottom: 0;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .step-line {
+    top: 44px;
+    left: 50%;
+    width: 2px;
+    height: calc(100% + 32px);
+    transform: translateX(-50%);
+  }
+
+  .step-info {
+    text-align: left;
+    padding-top: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
 }

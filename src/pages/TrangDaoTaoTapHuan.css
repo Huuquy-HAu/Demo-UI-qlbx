@@ -1,0 +1,504 @@
+/* Prefix dtth- (Dao Tao Tap Huan) */
+
+.dtth-page {
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  padding: 112px 32px 32px;
+}
+
+.dtth-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.dtth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.dtth-title-area span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #94A3B8;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dtth-title {
+  font-family: 'Inter';
+  font-size: 32px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* Bento Stats */
+.dtth-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dtth-stat-card {
+  font-family: 'Inter';
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #F1F5F9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.dtth-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748B;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.dtth-stat-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+/* Tabs */
+.dtth-tabs-list {
+  border-bottom: 2px solid #E2E8F0;
+  margin-bottom: 32px;
+  gap: 32px;
+}
+
+.dtth-tabs-tab {
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #64748B;
+  transition: all 0.2s;
+}
+
+.dtth-tabs-tab[data-active] {
+  color: #B91C1C !important;
+  border-bottom-color: #B91C1C !important;
+}
+
+/* Calendar Style Section */
+.dtth-calendar-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid #F1F5F9;
+}
+
+.dtth-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dtth-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #F1F5F9;
+  border: 1px solid #F1F5F9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dtth-calendar-day-label {
+  background: #F8FAFC;
+  padding: 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  text-transform: uppercase;
+}
+
+.dtth-calendar-day {
+  background: white;
+  min-height: 120px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dtth-event-tag {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  border-left: 3px solid transparent;
+}
+
+.dtth-event-tag.training {
+  background: #EEF2FF;
+  color: #4F46E5;
+  border-left-color: #4F46E5;
+}
+
+.dtth-event-tag.exam {
+  background: #FEF2F2;
+  color: #EF4444;
+  border-left-color: #EF4444;
+}
+
+/* Table Section */
+.dtth-table-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #F1F5F9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.dtth-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dtth-table th {
+  background: #F8FAFC;
+  padding: 16px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748B;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.dtth-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid #F1F5F9;
+  font-size: 14px;
+}
+
+/* Certificate Preview */
+.dtth-cert-preview {
+  width: 100%;
+  aspect-ratio: 1.414;
+  /* A4 landscape */
+  background: white;
+  border: 15px double #E2E8F0;
+  padding: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dtth-cert-header {
+  font-family: 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.dtth-cert-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #B91C1C;
+  margin-bottom: 20px;
+}
+
+.dtth-cert-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px 0;
+  border-bottom: 2px solid #0F172A;
+  padding-bottom: 10px;
+  min-width: 300px;
+}
+
+.dtth-qr-code {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F8FAFC;
+}
+
+/* Document Repository */
+.dtth-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.dtth-doc-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.dtth-doc-card:hover {
+  border-color: #B91C1C;
+  transform: translateY(-2px);
+}
+
+.dtth-doc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #FEF2F2;
+  color: #B91C1C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Premium Modal Styles --- */
+.dtth-modal-content {
+  background: white;
+  border-radius: 24px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: dtthSlideUp 0.3s ease-out;
+}
+
+@keyframes dtthSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dtth-modal-header {
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.dtth-modal-body {
+  padding: 32px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dtth-modal-footer {
+  padding: 24px 40px;
+  background: #F8FAFC;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  border-top: 1px solid #F1F5F9;
+}
+
+.dtth-btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #F1F5F9;
+  color: #475569;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dtth-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ea1e22 0%, #b40006 100%);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 20px -6px rgba(234, 30, 34, 0.4);
+}
+
+.dtth-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -8px rgba(234, 30, 34, 0.5);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .dtth-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dtth-page {
+    padding: 90px 20px 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dtth-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .dtth-btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dtth-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dtth-stat-card {
+    padding: 20px;
+  }
+
+  .dtth-stat-value {
+    font-size: 28px;
+  }
+
+  .dtth-tabs-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 24px;
+    padding-bottom: 4px;
+  }
+
+  .dtth-tabs-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dtth-calendar-card {
+    padding: 20px;
+  }
+
+  .dtth-calendar-grid {
+    min-width: 700px;
+    /* Force scroll for calendar */
+  }
+
+  .dtth-calendar-card {
+    overflow-x: auto;
+  }
+
+  .dtth-table-card {
+    border-radius: 12px;
+  }
+
+  .dtth-table {
+    min-width: 900px;
+    /* Force scroll for table */
+  }
+
+  .dtth-table td,
+  .dtth-table th {
+    padding: 12px 16px;
+  }
+
+  /* Modal Improvements */
+  .dtth-modal-content {
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+  }
+
+  .dtth-modal-header {
+    padding: 24px;
+  }
+
+  .dtth-modal-body {
+    padding: 24px;
+  }
+
+  .dtth-modal-footer {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .dtth-modal-footer button {
+    width: 100%;
+  }
+
+  /* Cert Preview Scale */
+  .dtth-cert-preview {
+    padding: 20px;
+    border-width: 8px;
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  .dtth-cert-title {
+    font-size: 28px;
+  }
+
+  .dtth-cert-name {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  .dtth-cert-header {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dtth-title {
+    font-size: 24px;
+  }
+
+  .dtth-cert-preview {
+    transform: scale(0.7);
+  }
+}
