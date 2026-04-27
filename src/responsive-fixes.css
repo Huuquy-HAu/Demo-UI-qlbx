@@ -1,0 +1,177 @@
+/* ============================================================
+   GLOBAL RESPONSIVE FIXES — iOS Safari & Mobile
+   Tập trung vào 3 vấn đề chính:
+   1. Ngăn horizontal scroll gây zoom-out trên iOS
+   2. Giảm padding ngang của tất cả page containers trên mobile
+   3. Đảm bảo tables cuộn ngang nội bộ, không gây tràn trang
+   ============================================================ */
+
+/* ===== 1. TOÀN CỤC: Ngăn mọi element tràn ngang ===== */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  /* iOS: prevent font auto-size adjustment */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ===== 2. PAGE CONTAINERS - Giảm padding trên mobile ===== */
+@media screen and (max-width: 768px) {
+
+  /* Tất cả các trang Dashboard dùng padding: 112px 32px 32px */
+  .tthc-page,
+  .ttkt-page,
+  .scbx-page,
+  .qlgp-page,
+  .tntb-page,
+  .dtth-page,
+  .tdscs-page,
+  .dmuc-page,
+  .chh-page,
+  .bcth-page,
+  .ptqt-page {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Các trang khác chưa rõ prefix */
+  .dashboard-page {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* ===== HERO - TrangChu ===== */
+  .bento-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-search-bar {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .stats-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* ===== FILTER BARS - wrap về dọc ===== */
+  .tdscs-filter-bar,
+  .qlgp-filter-bar,
+  [class$="-filter-bar"] {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 12px;
+  }
+
+  /* Header actions - wrap về dọc */
+  .tdscs-header,
+  .qlgp-header,
+  [class$="-header"] {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+
+  [class$="-header-actions"] {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tdscs-dropdown-group,
+  [class$="-dropdown-group"] {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ===== TOPNAVBAR ===== */
+  .tnb-search-wrapper {
+    overflow: hidden;
+    max-width: 40px;
+  }
+}
+
+/* ===== 3. TABLE WRAPPERS: cuộn ngang nội bộ ===== */
+/* Đây là fix quan trọng nhất — table có min-width cứng phải 
+   được bọc trong overflow-x: auto, KHÔNG được tràn ra page */
+[class$="-table-wrapper"],
+[class*="-table-wrapper"],
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+  max-width: 100%;
+}
+
+/* Các card bao bọc table */
+[class$="-table-card"],
+[class*="-table-card"] {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* ===== 4. DASHBOARD LAYOUT SAFETY NET ===== */
+.dashboard-layout {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.dashboard-content {
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dashboard-main {
+  min-width: 0; /* Fix flexbox overflow bug */
+  overflow-x: hidden;
+}
+
+/* ===== 5. MANTINE COMPONENTS ===== */
+/* Ngăn Popover/Dropdown tràn ra ngoài màn hình trên mobile */
+[class*="mantine-Popover-dropdown"],
+[class*="mantine-Select-dropdown"],
+[class*="mantine-Tooltip-tooltip"] {
+  max-width: calc(100vw - 24px) !important;
+}
+
+/* Drawer full-width trên mobile */
+@media screen and (max-width: 768px) {
+  [class*="mantine-Drawer-content"] {
+    max-width: 100vw !important;
+  }
+}
+
+/* ===== 6. MOBILE XS < 390px (iPhone SE, iPhone mini) ===== */
+@media screen and (max-width: 390px) {
+  .tthc-page,
+  .ttkt-page,
+  .scbx-page,
+  .qlgp-page,
+  .tntb-page,
+  .dtth-page,
+  .tdscs-page,
+  .dmuc-page,
+  .chh-page,
+  .bcth-page,
+  .ptqt-page,
+  .dashboard-page {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .bento-section,
+  .stats-section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero-heading h1 {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+}

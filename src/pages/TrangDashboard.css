@@ -9,6 +9,8 @@
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 48px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .dashboard-header {
@@ -648,6 +650,10 @@
 @media screen and (max-width: 768px) {
   .dashboard-page {
     padding-top: 90px;
+  }
+
+  .dashboard-container {
+    padding: 0 16px;
   }
 
   .dashboard-title {
