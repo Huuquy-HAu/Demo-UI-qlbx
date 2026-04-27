@@ -9,6 +9,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .home-footer {
+    padding: 40px 24px;
+  }
+}
+
 /* Main content (1:107) - centered, vertical, gap 16 */
 .footer-main {
   display: flex;

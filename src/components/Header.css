@@ -127,7 +127,18 @@
   }
   
   .header-nav {
-    gap: 20px;
+    gap: 16px; /* Reduced gap even more */
+  }
+
+  .header-logo .logo-text {
+    font-size: 16px; /* Smaller text on tablet */
+  }
+}
+
+/* Intermediate breakpoint to hide logo text before it crashes into nav */
+@media screen and (max-width: 900px) {
+  .header-logo .logo-text {
+    display: none;
   }
 }
 

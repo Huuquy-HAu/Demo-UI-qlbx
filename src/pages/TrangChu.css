@@ -2,6 +2,9 @@
 .home-page {
   font-family: 'Inter', sans-serif;
   color: #1A1C1D;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* ===== HERO SECTION (1:4) ===== */
@@ -454,8 +457,12 @@
 
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: auto auto; /* Changed from fixed 240px */
     max-width: 100%;
+  }
+
+  .bento-card {
+    min-height: 240px; /* Instead of fixed grid-rows */
   }
 
   .bento-card--wide {
@@ -465,10 +472,11 @@
   .stats-container {
     gap: 0;
     padding: 0 20px;
+    max-width: 100%;
   }
 
   .stat-divider {
-    margin: 0 30px;
+    margin: 0 15px; /* Reduced from 30px */
   }
 }
 
@@ -508,6 +516,7 @@
 
   .bento-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 16px;
   }
 
@@ -517,7 +526,7 @@
 
   .bento-card {
     padding: 24px;
-    min-height: 200px;
+    min-height: 180px;
   }
 
   .bento-card h3 {
@@ -539,10 +548,11 @@
   .stats-container {
     flex-direction: column;
     gap: 32px;
+    padding: 0 16px; /* Explicit padding for mobile */
   }
 
   .stat-divider {
-    display: none;
+    display: none !important;
   }
 
   .stat-number {

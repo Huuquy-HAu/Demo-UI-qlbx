@@ -12,6 +12,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   color: #1A1C1D;
   background-color: #FFFFFF;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 #root {
@@ -27,6 +29,7 @@ body {
   max-width: 100%;
   margin: 0;
   text-align: left;
+  overflow-x: hidden;
 }
 
 /* Main layout */
@@ -34,11 +37,18 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .main-layout .content {
   flex: 1;
   margin-top: 80px; /* header height offset */
+}
+
+@media screen and (max-width: 768px) {
+  .main-layout .content {
+    margin-top: 70px; /* matched to mobile header height */
+  }
 }
 
 a { color: inherit; }
