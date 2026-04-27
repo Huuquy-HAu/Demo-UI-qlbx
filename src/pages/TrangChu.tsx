@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRightIcon, CircleCheckHomeIcon, DeviceManagementHomeIcon, MapCircleHomeIcon, ReportHomeIcon } from '../assets/icon';
+import { ArrowRightIcon, CircleCheckHomeIcon, DeviceManagementHomeIcon, ReportHomeIcon, ShieldCircleIcon } from '../assets/icon';
 import './TrangChu.css';
 import { Button, Flex } from '@mantine/core';
 
@@ -90,13 +90,12 @@ export default function TrangChu() {
 
         {/* Grid container (1:30) - CSS Grid 3 col, 2 row, 240px each, gap 24px */}
         <div className="bento-grid">
-          {/* Card 1 (1:31) - span 2 cols, white bg, shadow, radius 12 */}
+          {/* Card 1 (Wide): Báo cáo định kỳ */}
           <div className="bento-card bento-card--wide bento-card--white">
             <div className="bento-card__content">
               <div className="bento-card__icon"><ReportHomeIcon /></div>
               <h3>Báo cáo định kỳ</h3>
-              <p>Quản lý và nộp báo cáo thực trạng an toàn bức xạ hàng năm của các cơ sở sử dụng thiết bị X-
-                quang, nguồn phóng xạ.</p>
+              <p>Quản lý và nộp báo cáo thực trạng an toàn bức xạ hàng năm của các cơ sở sử dụng thiết bị X-quang, nguồn phóng xạ.</p>
               <Flex align='center' justify='start' gap={8}>
                 <Link to="/dang-nhap" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: 600, color: '#B40006', cursor: 'pointer', lineHeight: '20px' }}>TRUY CẬP </Link>
                 <ArrowRightIcon />
@@ -113,12 +112,12 @@ export default function TrangChu() {
             </div>
           </div>
 
-          {/* Card 2 (1:44) - 1 col, gray bg #F3F3F5, radius 12 */}
+          {/* Card 2 (Standard): Quản lý thiết bị */}
           <div className="bento-card bento-card--gray">
             <div className="bento-card__content">
               <div className="bento-card__icon"><DeviceManagementHomeIcon /></div>
               <h3>Quản lý thiết bị</h3>
-              <p>Cơ sở dữ liệu thiết bị X-quang y tế và công nghiệp.</p>
+              <p>Cơ sở dữ liệu thiết bị X-quang y tế và công nghiệp trên địa bàn tỉnh.</p>
               <Flex align='center' justify='start' gap={8}>
                 <Link to="/dang-nhap" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: 600, color: '#1A1C1D', cursor: 'pointer', lineHeight: '20px' }}>CHI TIẾT </Link>
                 <ArrowRightIcon fillColor='#1A1C1D' />
@@ -126,13 +125,12 @@ export default function TrangChu() {
             </div>
           </div>
 
-          {/* Card 3 (1:57) - 1 col, gray bg, radius 12 */}
+          {/* Card 3 (Standard): Cấp phép */}
           <div className="bento-card bento-card--gray">
             <div className="bento-card__content">
               <div className="bento-card__icon"><CircleCheckHomeIcon /></div>
               <h3>Cấp phép</h3>
-              <p>Thủ tục cấp mới, gia hạn, sửa đổi giấy phép
-                tiến hành công việc bức xạ.</p>
+              <p>Thủ tục cấp mới, gia hạn, sửa đổi giấy phép tiến hành công việc bức xạ.</p>
               <Flex align='center' justify='start' gap={8}>
                 <Link to="/dang-nhap" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: 600, color: '#1A1C1D', cursor: 'pointer', lineHeight: '20px' }}>CHI TIẾT </Link>
                 <ArrowRightIcon fillColor='#1A1C1D' />
@@ -140,18 +138,22 @@ export default function TrangChu() {
             </div>
           </div>
 
-          {/* Card 4 (1:70) - span 2 cols, white bg, shadow, map visual, radius 12 */}
-          <div className="bento-card bento-card--wide bento-card--map">
-            <div className="bento-card__map-bg"></div>
-            <div className="bento-card__map-gradient"></div>
-            <div className="bento-card__content bento-card__content--overlay">
-              <div className="bento-card__icon"><MapCircleHomeIcon /></div>
-              <h3>Bản đồ an toàn bức xạ</h3>
-              <p>Trực quan hóa phân bố các cơ sở có thiết bị bức xạ và
-                nguồn phóng xạ trên địa bàn tỉnh Quảng Ninh.</p>
-              <Button style={{ backgroundColor: '#E2E2E4', color: '#1A1C1D', borderRadius: '6px', padding: '8px 16px', fontWeight: 600, fontSize: '14px', lineHeight: '20px', cursor: 'pointer', width: '150px' }}>
-                XEM BẢN ĐỒ
+          {/* Card 4 (Wide): Tra cứu & Cảnh báo */}
+          <div className="bento-card bento-card--wide bento-card--alerts">
+            <div className="bento-card__content">
+              <div className="bento-card__icon"><ShieldCircleIcon /></div>
+              <h3>Tra cứu & Cảnh báo</h3>
+              <p>Hệ thống tra cứu hồ sơ an toàn bức xạ, theo dõi thời hạn giấy phép và nhắc nhở kiểm định định kỳ.</p>
+              <Button style={{ backgroundColor: '#B40006', color: '#FFFFFF', borderRadius: '6px', padding: '8px 16px', fontWeight: 600, fontSize: '14px', lineHeight: '20px', cursor: 'pointer', width: '150px' }}>
+                TRUY CẬP NGAY
               </Button>
+            </div>
+            <div className="bento-card__visual">
+              <div className="mini-alerts">
+                <div className="alert-bar" style={{ width: '100%', opacity: 1 }}></div>
+                <div className="alert-bar" style={{ width: '85%', opacity: 0.6 }}></div>
+                <div className="alert-bar" style={{ width: '70%', opacity: 0.3 }}></div>
+              </div>
             </div>
           </div>
         </div>
